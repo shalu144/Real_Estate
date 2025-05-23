@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land & Plots - Om Saravanabhava</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/land.css">
+     <!-- Leaflet CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+     <link rel="stylesheet" href="css/main.css">  <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="header">        
+    </header>
+
+    <nav class="nav-bar">
+        <div class="left-section">
+          <button class="back-button" onclick="goBack()">&#8592; </button>
+          <a href="index.html" class="home-btn"></a>
+          <script>
+          function goBack() {
+              window.history.back(); // Navigates to the previous page
+          }
+          </script>
+             <img src="images/v1_10.png" alt="Company Logo" class="logo">
+             
+         </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="land.html">Land/Plot</a>
+        <a href="service.html">Service</a>
+        <a href="post.html">Post Your Property</a>
+        <a href="contact.html">Contact us</a>
+        <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+       
+        <div class="right-section">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore Our Land & Plots</h1>
+        <p>Find the best plots for your dream home or investment.</p>
+    </section>
+
+    <!-- Land Listings Section -->
+    <section class="land-listings">
+        <div class="listing">
+            <img src="images/v131_97.png" alt="Land 1">
+            <h3>Royal Residency - 436 sqft</h3>
+            <p>Location: Madurai, Tamil Nadu</p>
+            <p>Price: ₹6,25,000</p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+
+        <div class="listing">
+            <img src="images/WhatsApp Image 2025-03-24 at 11.08.21 AM.jpeg" alt="Land 2">
+            <h3>Pasumai Nagar - 400 sqft</h3>
+            <p>Location: Kallanthiri, Madurai</p>
+            <p>Price: ₹3,50,000</p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+
+        <div class="listing">
+            <img src="images/image1.jpeg" alt="Land 3">
+            <h3>Royal Residency - 436 sqft</h3>
+            <p>Location: Madurai, Tamil Nadu</p>
+            <p>Price: ₹6,25,000</p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </section>
+
+    <div class="filter">
+        <input type="text" id="search" placeholder="Search by location..." onkeyup="filterPlots()">
+    </div>
+    
+    <!--<div class="filter-container">
+        <label for="location">Location:</label>
+        <select id="location">
+            <option value="all">All</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="chennai">Chennai</option>
+            <option value="hyderabad">Hyderabad</option>
+        </select>
+    
+        <label for="price">Price Range:</label>
+        <select id="price">
+            <option value="all">All</option>
+            <option value="low">Below ₹20 Lakhs</option>
+            <option value="mid">₹20-₹30 Lakhs</option>
+            <option value="high">Above ₹30 Lakhs</option>
+        </select>
+    
+        <button id="filterBtn">Filter</button>
+    </div>-->
+    
+    
+    <script>
+    function filterPlots() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let listings = document.querySelectorAll(".listing");
+    
+        listings.forEach(plot => {
+            let location = plot.innerText.toLowerCase();
+            if (location.includes(input)) {
+                plot.style.display = "block";
+            } else {
+                plot.style.display = "none";
+            }
+        });
+        
+
+    }
+    </script>
+    <div id="map"></div> <!-- Map container -->
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js" defer></script>  <!-- Link to your Jav
+    
+    
+    
+
+</body>
+</html>

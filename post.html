@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> About Us  </title>
+    
+    <link href="./css/post.css"  rel="stylesheet" />
+  </head>
+  <body>
+
+   
+
+
+    
+    <div class="left-section">
+        <button class="back-button" onclick="goBack()">&#8592; </button>
+        <a href="index.html" class="home-btn"></a>
+        <script>
+        function goBack() {
+            window.history.back(); // Navigates to the previous page
+        }
+        </script>
+        </div>
+
+    <div class="upload-container">
+        <h2>Upload Property Image</h2>
+        
+        <!-- File Input -->
+        <label for="propertyImage" class="custom-file-upload">Choose Image</label>
+        <input type="file" id="propertyImage" accept="image/*">
+        
+        <!-- Image Preview -->
+        <div class="image-preview" id="imagePreview"></div>
+        
+        <!-- Upload Button -->
+        <button id="uploadBtn" disabled>Upload</button>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("propertyImage");
+        const imagePreview = document.getElementById("imagePreview");
+        const uploadBtn = document.getElementById("uploadBtn");
+
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Property Image">`;
+                    uploadBtn.disabled = false;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        uploadBtn.addEventListener("click", function () {
+            alert("Image uploaded successfully! (Backend required)");
+        });
+    </script>
+
+</body>
+</html>

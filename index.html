@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Om Sravanabhava </title>
+    <link href="./css/main.css" rel="stylesheet"  />
+    <link href="./css/about.css" rel="stylesheet"/>
+    <link href="./css/land.css" rel="stylesheet"/>
+    <link href="./css/service.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Font Awesome for WhatsApp icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body onload="AOS.init()">
+
+    
+<header class="header">
+  <nav class="nav-bar">
+    <div class="left-section">
+      <img src="images/v1_10.png" alt="Company Logo" class="logo">
+    </div>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a> 
+      <a href="land.html">Land/Plot</a>
+      <a href="service.html">Service</a>
+      <a href="post.html">Post Your Property</a>
+      <a href="contact.html">Contact us</a>
+      <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+    </div>
+
+    <div class="right-section">
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+</script>
+
+
+    <div class="img">
+
+   
+     <!-- Main Content -->
+     <section class="content">
+        <div class="fade-in">
+            <h2>Welcome to Om Saravanabhava Real Estate</h2>
+            <p>Your trusted partner in real estate investment and property management.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+    <center>
+    <div class="property-search">
+      <div class="tabs">
+        <button class="tab active" onclick="setActiveTab(this)">Buy Properties</button>
+        <button class="tab" onclick="setActiveTab(this)">Rent Properties</button>
+      </div>
+      
+      <script>
+        function setActiveTab(clickedTab) {
+          const tabs = document.querySelectorAll('.tab');
+          tabs.forEach(tab => tab.classList.remove('active'));
+          clickedTab.classList.add('active');
+        }
+      </script>
+
+        <div class="search-container">
+            <div class="search-field">
+                <label>ENTER KEYWORD</label>
+                <input type="text" placeholder="Enter Keyword">
+            </div>
+            <div class="search-field">
+                <label>PROPERTY TYPE</label>
+                <select>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Land</option>
+                </select>
+            </div>
+            <div class="search-field">
+                <label>LOCATION</label>
+                <input type="text" placeholder="Search Location">
+            </div>
+            <div class="search-field">
+                <label>PRICE LIMIT</label>
+                <select>
+                    <option>₹3,50,000</option>
+                    <option>₹3,50,000</option>
+                    <option>₹6,25,000</option>
+                    <option>₹6,25,000</option>
+                </select>
+            </div>
+            <button class="search-button">SEARCH</button>
+        </div>
+    </div>
+
+</div>
+</center> </br>
+<!--category section-->
+<section class="categories-section">
+    <p class="subheading"> CATEGORIES</p>
+    <h2 class="heading">Explore Our Categories &<br> Places</h2>
+
+    <div class="category-grid">
+      <div class="category-card animate delay-1">
+        <img src="https://img.icons8.com/ios/100/000000/city.png" alt="Land Icon"/>
+        <p>Land</p>
+      </div>
+      <div class="category-card animate delay-2">
+        <img src="https://img.icons8.com/ios/100/000000/home.png" alt="Residential Icon"/>
+        <p>Residential</p>
+      </div>
+      <div class="category-card animate delay-3">
+        <img src="https://img.icons8.com/ios/100/000000/apartment.png" alt="Commercial Icon"/>
+        <p>Commercial</p>
+      </div>
+      <div class="category-card animate delay-4">
+        <img src="https://img.icons8.com/ios/100/000000/factory.png" alt="Industrial Icon"/>
+        <p>Industrial</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+<!-- About Section -->
+<section class="about-us" data-aos="fade-up" data-aos-duration="1500">
+    <div class="about">
+        <img src="images/v1_11.png" class="pic" data-aos="fade-left" data-aos-duration="1500">
+        <div class="text" data-aos="fade-right" data-aos-duration="1500">
+            <h2>About Us</h2>
+            <h5>Leading Real Estate Experts</h5>
+            <p>Om Saravanabhava Real Estate is a leading property investment company specializing in land, plots, and real estate management. We help you find the perfect property for your needs.</p>
+          <p>With years of experience, we provide expert guidance and support to make your property journey seamless.</p>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutSection = document.querySelector(".about-us");
+
+    function scrollReveal() {
+        const sectionPos = aboutSection.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.3; 
+
+        if (sectionPos < screenPos) {
+            aboutSection.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", scrollReveal);
+});
+
+</script>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Explore Our Land & Plots</h1>
+    <p>Find the best plots for your dream home or investment.</p>
+</section>
+
+<!-- Land Listings Section -->
+<section class="land-listings">
+    <div class="listing">
+        <img src="images/v131_97.png" alt="Land 1">
+        <h3>Royal Residency - 436 sqft</h3>
+        <p>Location: Madurai, Tamil Nadu</p>
+        <p>Price: ₹6,25,000</p>
+        <a href="details.html" class="btn">View Details</a>
+    </div>
+
+    <div class="listing">
+        <img src="images/WhatsApp Image 2025-03-24 at 11.08.21 AM.jpeg" alt="Land 2">
+        <h3>Pasumai Nagar - 400 sqft</h3>
+        <p>Location: Kallanthiri, Madurai</p>
+        <p>Price: ₹3,50,000</p>
+        <a href="details.html" class="btn">View Details</a>
+    </div>
+
+    <div class="listing">
+        <img src="images/image1.jpeg" alt="Land 3">
+        <h3>Royal Residency - 436 sqft</h3>
+        <p>Location: Madurai, Tamil Nadu</p>
+        <p>Price: ₹6,25,000</p>
+        <a href="details.html" class="btn">View Details</a>
+    </div>
+</section>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  function setActiveTab(clickedTab) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    clickedTab.classList.add('active');
+  }
+</script>
+
+<!-- Service section -->
+<section class="services">
+    <div class="section-header">
+      <h2>Our <span>Service</span></h2>
+      <p>We provide comprehensive real estate solutions tailored to your needs. Whether you're buying, renting, developing, or analyzing the market, we've got you covered with expert services designed to simplify your journey.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="service-cards">
+      <div class="card">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h3>Property Sale</h3>
+        <p>We assist you in buying or selling properties with professional support, market knowledge, and trustworthy service—ensuring smooth transactions and the best value.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-check-circle"></i></div>
+        <h3>Property Rent</h3>
+        <p>Looking to rent or lease a property? Our rental services help tenants and landlords connect seamlessly, backed by clear terms and secure agreements.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-crosshairs"></i></div>
+        <h3>Property Development</h3>
+        <p>From concept to completion, we guide your real estate development projects. Whether residential or commercial, our team ensures quality and compliance at every stage.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Market Analysis</h3>
+        <p>Stay ahead with our detailed market analysis reports. We provide valuable insights on trends, pricing, and investment opportunities to help you make informed decisions.</p>
+      </div> 
+    </div>
+  </section>
+  <!-- / Service section -->
+
+
+<!--Footer Section-->
+  <footer>
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+
+    <div class="footer-content">
+        <h2>OM Saravanabhava Real Estate Company</h2>
+        <p>Find your dream home with us. We offer the best properties at the best prices.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+   
+</footer>
+
+
+ 
+    <script src="./js/main.js"></script>
+    
+   
+      
+    </div>
+    </body>
+</html>
+
+   

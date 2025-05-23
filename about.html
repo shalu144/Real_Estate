@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> About Us  </title>
+    <link href ="./css/main.css" rel="stylesheet" />
+    <link href="./css/about.css" rel="stylesheet"  />
+  </head>
+  <body>
+
+    <header class="header">        
+    </header>
+ 
+
+    <nav class="nav-bar">
+        <div class="left-section">
+          <button class="back-button" onclick="goBack()">&#8592; </button>
+          <a href="index.html" class="home-btn"></a>
+          <script>
+          function goBack() {
+              window.history.back(); // Navigates to the previous page
+          }
+          </script>
+             <img src="images/v1_10.png" alt="Company Logo" class="logo">
+             
+         </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="land.html">Land/Plot</a>
+        <a href="service.html">Service</a>
+        <a href="post.html">Post Your Property</a>
+        <a href="contact.html">Contact us</a>
+        <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+       
+        <div class="right-section">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginBtn = document.getElementById("loginBtn");
+            if (loginBtn) {
+                loginBtn.addEventListener("click", function () {
+                    window.location.href = "login.html"; // Redirect to login page
+                });
+            }
+        });
+
+    </script>
+
+   
+    <section class="about-us">
+      <div class="about">
+        <img src="images/v1_11.png" class="pic" />
+        <div class="text">
+          <h2>About Us</h2>
+          <h5>OM Saravana Bhava <span>Real Estate</span></h5>
+          <p>Om Saravanabhava Real Estate is a leading property investment company specializing in land, plots, and real estate management. We help you find the perfect property for your needs.</p>
+          <p>With years of experience, we provide expert guidance and support to make your property journey seamless.</p>
+          <div class="data">
+            <a href="#" class="hire">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutSection = document.querySelector(".about-us");
+        
+            function scrollReveal() {
+                const sectionPos = aboutSection.getBoundingClientRect().top;
+                const screenPos = window.innerHeight / 1.3; 
+        
+                if (sectionPos < screenPos) {
+                    aboutSection.classList.add("show");
+                }
+            }
+        
+            window.addEventListener("scroll", scrollReveal);
+        });
+        
+        </script>
+   
